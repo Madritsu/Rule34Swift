@@ -1,0 +1,79 @@
+name: Build and release Rule34Swift
+
+run-name: Release ${{ inputs.tag_name }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: Release version, for example v1.0.0
+        required: true
+        type: string
+      release_notes:
+        description: Optional short intro. Leave blank to use the generated release notes.
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    name: Build both apps and publish release
+    runs-on: macos-26
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Prepare release assets
+        run: mkdir -p release-assets
+
+      - name: Build iOS IPA
+        run: ./build.sh ios
+
+      - name: Keep iOS IPA for release
+        run: mv Rule34Swift.ipa release-assets/Rule34Swift-iOS.ipa
+
+      - name: Build native macOS app
+        run: ./build.sh mac
+
+      - name: Package macOS app as DMG
+        env:
+          RELEASE_TAG: ${{ inputs.tag_name }}
+        run: |
+          mkdir -p release-assets/dmg-root
+          ditto macOS/build/Rule34SwiftMac.app release-assets/dmg-root/Rule34SwiftMac.app
+          ln -s /Applications release-assets/dmg-root/Applications
+          hdiutil create \
+            -volname "Rule34Swift ${RELEASE_TAG}" \
+            -srcfolder release-assets/dmg-root \
+            -ov \
+            -format UDZO \
+            release-assets/Rule34Swift-macOS.dmg
+          rm -rf release-assets/dmg-root
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag_name }}
+          RELEASE_NOTES: ${{ inputs.release_notes }}
+        run: |
+          INTRO="${RELEASE_NOTES}"
+          if [[ -z "${INTRO//[[:space:]]/}" ]]; then
+            INTRO="Development builds. The iOS IPA and macOS DMG are ad-hoc signed and are not notarized."
+          else
+            INTRO+=$'\n\nDevelopment builds. The iOS IPA and macOS DMG are ad-hoc signed and are not notarized.'
+          fi
+
+          gh release create "$RELEASE_TAG" \
+            release-assets/Rule34Swift-iOS.ipa \
+            release-assets/Rule34Swift-macOS.dmg \
+            --target "$GITHUB_SHA" \
+            --title "Rule34Swift ${RELEASE_TAG}" \
+            --notes "$INTRO" \
+            --generate-notes

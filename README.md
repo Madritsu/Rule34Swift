@@ -37,21 +37,31 @@ Rule34Swift is an ad-free client for searching and viewing posts from Rule34.xxx
 
 ### Build
 
-Run the build script from the repository root:
+#### Build on GitHub
+
+After the workflow is pushed to GitHub, open the repository's **Actions** tab, select **Build and release Rule34Swift**, and click **Run workflow**. Enter a new version tag such as `v1.0.0`. A short release intro is optional; if you leave it blank, GitHub generates the release notes automatically. The workflow builds both apps and publishes a release with these assets:
+
+- `Rule34Swift-iOS.ipa`
+- `Rule34Swift-macOS.dmg`
+
+The workflow runs on a GitHub-hosted macOS machine because Xcode builds for Apple platforms require macOS. Its configuration is in `.github/workflows/build.yml`. Automatic notes are based on changes since the previous release; descriptive commit or pull request titles make them easier to read.
+
+#### Build locally
+
+Run the build script from the repository root. With no argument, it opens a menu where you can choose iOS IPA or the native macOS app:
 
 ```sh
-./build.sh mac
+./build.sh
 ```
 
-The native macOS app is written to `macOS/build/Rule34SwiftMac.app`.
-
-To build the iOS package:
+You can also choose a target directly:
 
 ```sh
 ./build.sh ios
+./build.sh mac
 ```
 
-This creates `Rule34Swift.ipa` in the repository root. Running `./build.sh` without an argument opens a target selection prompt. These are development builds; the script applies ad-hoc signing and does not notarize or prepare releases for the App Store.
+The macOS app is written to `macOS/build/Rule34SwiftMac.app`; the iOS build creates `Rule34Swift.ipa` in the repository root. These are development builds: they use ad-hoc signing and are not notarized or prepared for App Store release.
 
 You can also open either project in Xcode:
 
@@ -102,21 +112,31 @@ Rule34Swift — клиент без рекламы для поиска и про
 
 ### Сборка
 
-Запустите скрипт сборки из корневой папки проекта:
+#### Сборка на GitHub
+
+После отправки workflow на GitHub открой вкладку **Actions**, выбери **Build and release Rule34Swift** и нажми **Run workflow**. Укажи новый тег версии, например `v1.0.0`. Короткое вступление к описанию релиза можно написать по желанию; если оставить поле пустым, GitHub автоматически сформирует список изменений. Workflow соберёт оба приложения и опубликует релиз с файлами:
+
+- `Rule34Swift-iOS.ipa`
+- `Rule34Swift-macOS.dmg`
+
+Сборка запускается на macOS-машине GitHub, потому что Xcode собирает приложения для платформ Apple на macOS. Настройки workflow находятся в `.github/workflows/build.yml`. Автоматическое описание формируется по изменениям с прошлого релиза; понятные названия коммитов и pull request делают его легче для чтения.
+
+#### Локальная сборка
+
+Запусти скрипт из корневой папки проекта. Без аргумента появится меню выбора: iOS IPA или нативное приложение macOS.
 
 ```sh
-./build.sh mac
+./build.sh
 ```
 
-Собранное приложение macOS появится в `macOS/build/Rule34SwiftMac.app`.
-
-Чтобы собрать пакет iOS:
+Можно также сразу указать нужную платформу:
 
 ```sh
 ./build.sh ios
+./build.sh mac
 ```
 
-Файл `Rule34Swift.ipa` появится в корневой папке проекта. Если запустить `./build.sh` без аргумента, скрипт предложит выбрать платформу. Это сборки для разработки: скрипт применяет ad-hoc подпись, но не выполняет нотариальное заверение и не готовит приложение к публикации в App Store.
+Приложение macOS появится в `macOS/build/Rule34SwiftMac.app`, а файл iOS — в корневой папке как `Rule34Swift.ipa`. Это сборки для разработки: они подписываются ad-hoc, не проходят нотариальное заверение и не подготовлены к публикации в App Store.
 
 Проекты можно открыть и собрать в Xcode:
 
