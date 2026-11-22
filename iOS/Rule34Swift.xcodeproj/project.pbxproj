@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AD4617530A7020A00246F76 /* icons.icon in Resources */ = {isa = PBXBuildFile; fileRef = 0AD4617430A7020A00246F76 /* icons.icon */; };
+		111111111111111111111101 /* Rule34SwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111001 /* Rule34SwiftApp.swift */; };
+		111111111111111111111102 /* Rule34Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111002 /* Rule34Post.swift */; };
+		111111111111111111111103 /* AutocompleteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111003 /* AutocompleteItem.swift */; };
+		111111111111111111111104 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111004 /* KeychainStore.swift */; };
+		111111111111111111111105 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111005 /* AppSettings.swift */; };
+		111111111111111111111106 /* FavoritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111006 /* FavoritesStore.swift */; };
+		111111111111111111111107 /* Rule34APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111007 /* Rule34APIClient.swift */; };
+		111111111111111111111108 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111008 /* GalleryViewModel.swift */; };
+		111111111111111111111109 /* GlassCompat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111009 /* GlassCompat.swift */; };
+		111111111111111111111110 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111010 /* ContentView.swift */; };
+		111111111111111111111111 /* GalleryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111011 /* GalleryScreen.swift */; };
+		111111111111111111111112 /* PostTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111012 /* PostTile.swift */; };
+		111111111111111111111113 /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111013 /* PostDetailView.swift */; };
+		111111111111111111111114 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111014 /* SettingsView.swift */; };
+		111111111111111111111116 /* ImageCacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111018 /* ImageCacheStore.swift */; };
+		111111111111111111111117 /* R34VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111019 /* R34VideoPlayerView.swift */; };
+		111111111111111111111118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111020 /* Assets.xcassets */; };
+		111111111111111111111119 /* String+HTMLDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111021 /* String+HTMLDecoding.swift */; };
+		111111111111111111111120 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111022 /* AppCoordinator.swift */; };
+		111111111111111111111121 /* Rule34Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111023 /* Rule34Comment.swift */; };
+		111111111111111111111122 /* Rule34TagInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111024 /* Rule34TagInfo.swift */; };
+		111111111111111111111123 /* Rule34WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111025 /* Rule34WebView.swift */; };
+		111111111111111111111124 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111026 /* ProfileView.swift */; };
+		111111111111111111111125 /* PostInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111027 /* PostInfoView.swift */; };
+		111111111111111111111126 /* Rule34AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111028 /* Rule34AccountService.swift */; };
+		111111111111111111111127 /* Rule34AuthWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111029 /* Rule34AuthWebView.swift */; };
+		111111111111111111111128 /* Rule34TagMetadataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111030 /* Rule34TagMetadataStore.swift */; };
+		111111111111111111111141 /* Sources/R34ImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111131 /* Sources/R34ImageProcessor.m */; };
+		111111111111111111111142 /* Sources/R34NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111132 /* Sources/R34NetworkManager.m */; };
+		111111111111111111111143 /* Sources/R34BatchDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111133 /* Sources/R34BatchDownloader.m */; };
+		111111111111111111111144 /* Sources/R34DataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111134 /* Sources/R34DataParser.m */; };
+		111111111111111111111147 /* en.lproj/Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111138 /* en.lproj/Localizable.strings */; };
+		111111111111111111111148 /* ru.lproj/Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111139 /* ru.lproj/Localizable.strings */; };
+		111111111111111111111149 /* en.lproj/InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111151 /* en.lproj/InfoPlist.strings */; };
+		111111111111111111111150 /* ru.lproj/InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111152 /* ru.lproj/InfoPlist.strings */; };
+		111111111111111111111153 /* BulkDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111154 /* BulkDownloadView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0AD4617430A7020A00246F76 /* icons.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = icons.icon; sourceTree = "<group>"; };
+		111111111111111111111001 /* Rule34SwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule34SwiftApp.swift; sourceTree = "<group>"; };
+		111111111111111111111002 /* Rule34Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule34Post.swift; sourceTree = "<group>"; };
+		111111111111111111111003 /* AutocompleteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteItem.swift; sourceTree = "<group>"; };
+		111111111111111111111004 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		111111111111111111111005 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		111111111111111111111006 /* FavoritesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStore.swift; sourceTree = "<group>"; };
+		111111111111111111111007 /* Rule34APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule34APIClient.swift; sourceTree = "<group>"; };
+		111111111111111111111008 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		111111111111111111111009 /* GlassCompat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassCompat.swift; sourceTree = "<group>"; };
+		111111111111111111111010 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		111111111111111111111011 /* GalleryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScreen.swift; sourceTree = "<group>"; };
+		111111111111111111111012 /* PostTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTile.swift; sourceTree = "<group>"; };
+		111111111111111111111013 /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
+		111111111111111111111014 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		111111111111111111111015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		111111111111111111111016 /* Rule34Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rule34Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		111111111111111111111018 /* ImageCacheStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheStore.swift; sourceTree = "<group>"; };
+		111111111111111111111019 /* R34VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R34VideoPlayerView.swift; sourceTree = "<group>"; };
+		111111111111111111111020 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		111111111111111111111021 /* String+HTMLDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTMLDecoding.swift"; sourceTree = "<group>"; };
+		111111111111111111111022 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		111111111111111111111023 /* Rule34Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule34Comment.swift; sourceTree = "<group>"; };
+		111111111111111111111024 /* Rule34TagInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule34TagInfo.swift; sourceTree = "<group>"; };
+		111111111111111111111025 /* Rule34WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule34WebView.swift; sourceTree = "<group>"; };
+		111111111111111111111026 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		111111111111111111111027 /* PostInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInfoView.swift; sourceTree = "<group>"; };
+		111111111111111111111028 /* Rule34AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule34AccountService.swift; sourceTree = "<group>"; };
+		111111111111111111111029 /* Rule34AuthWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule34AuthWebView.swift; sourceTree = "<group>"; };
+		111111111111111111111030 /* Rule34TagMetadataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule34TagMetadataStore.swift; sourceTree = "<group>"; };
+		111111111111111111111131 /* Sources/R34ImageProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sources/R34ImageProcessor.m; sourceTree = "<group>"; };
+		111111111111111111111132 /* Sources/R34NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sources/R34NetworkManager.m; sourceTree = "<group>"; };
+		111111111111111111111133 /* Sources/R34BatchDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sources/R34BatchDownloader.m; sourceTree = "<group>"; };
+		111111111111111111111134 /* Sources/R34DataParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sources/R34DataParser.m; sourceTree = "<group>"; };
+		111111111111111111111136 /* Headers/R34Optimizations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Headers/R34Optimizations.h; sourceTree = "<group>"; };
+		111111111111111111111137 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		111111111111111111111138 /* en.lproj/Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		111111111111111111111139 /* ru.lproj/Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		111111111111111111111151 /* en.lproj/InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		111111111111111111111152 /* ru.lproj/InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		111111111111111111111154 /* BulkDownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulkDownloadView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		111111111111111111111201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		111111111111111111111301 = {
+			isa = PBXGroup;
+			children = (
+				111111111111111111111302 /* Rule34Swift */,
+				111111111111111111111309 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		111111111111111111111302 /* Rule34Swift */ = {
+			isa = PBXGroup;
+			children = (
+				111111111111111111111303 /* App */,
+				111111111111111111111304 /* Models */,
+				111111111111111111111305 /* Services */,
+				111111111111111111111306 /* ViewModels */,
+				111111111111111111111307 /* Views */,
+				111111111111111111111308 /* Extensions */,
+				111111111111111111111310 /* dylib */,
+				111111111111111111111020 /* Assets.xcassets */,
+				111111111111111111111138 /* en.lproj/Localizable.strings */,
+				111111111111111111111139 /* ru.lproj/Localizable.strings */,
+				111111111111111111111151 /* en.lproj/InfoPlist.strings */,
+				111111111111111111111152 /* ru.lproj/InfoPlist.strings */,
+				111111111111111111111015 /* Info.plist */,
+				0AD4617430A7020A00246F76 /* icons.icon */,
+			);
+			path = ../Rule34Swift;
+			sourceTree = "<group>";
+		};
+		111111111111111111111303 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				111111111111111111111001 /* Rule34SwiftApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		111111111111111111111304 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				111111111111111111111002 /* Rule34Post.swift */,
+				111111111111111111111003 /* AutocompleteItem.swift */,
+				111111111111111111111023 /* Rule34Comment.swift */,
+				111111111111111111111024 /* Rule34TagInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		111111111111111111111305 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				111111111111111111111004 /* KeychainStore.swift */,
+				111111111111111111111005 /* AppSettings.swift */,
+				111111111111111111111022 /* AppCoordinator.swift */,
+				111111111111111111111028 /* Rule34AccountService.swift */,
+				111111111111111111111030 /* Rule34TagMetadataStore.swift */,
+				111111111111111111111006 /* FavoritesStore.swift */,
+				111111111111111111111018 /* ImageCacheStore.swift */,
+				111111111111111111111007 /* Rule34APIClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		111111111111111111111306 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				111111111111111111111008 /* GalleryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		111111111111111111111307 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				111111111111111111111009 /* GlassCompat.swift */,
+				111111111111111111111010 /* ContentView.swift */,
+				111111111111111111111011 /* GalleryScreen.swift */,
+				111111111111111111111012 /* PostTile.swift */,
+				111111111111111111111013 /* PostDetailView.swift */,
+				111111111111111111111154 /* BulkDownloadView.swift */,
+				111111111111111111111019 /* R34VideoPlayerView.swift */,
+				111111111111111111111029 /* Rule34AuthWebView.swift */,
+				111111111111111111111025 /* Rule34WebView.swift */,
+				111111111111111111111026 /* ProfileView.swift */,
+				111111111111111111111027 /* PostInfoView.swift */,
+				111111111111111111111014 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		111111111111111111111308 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				111111111111111111111021 /* String+HTMLDecoding.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		111111111111111111111309 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				111111111111111111111016 /* Rule34Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		111111111111111111111310 /* dylib */ = {
+			isa = PBXGroup;
+			children = (
+				111111111111111111111136 /* Headers/R34Optimizations.h */,
+				111111111111111111111137 /* BridgingHeader.h */,
+				111111111111111111111131 /* Sources/R34ImageProcessor.m */,
+				111111111111111111111132 /* Sources/R34NetworkManager.m */,
+				111111111111111111111133 /* Sources/R34BatchDownloader.m */,
+				111111111111111111111134 /* Sources/R34DataParser.m */,
+			);
+			path = dylib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		111111111111111111111401 /* Rule34Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 111111111111111111111701 /* Build configuration list for PBXNativeTarget "Rule34Swift" */;
+			buildPhases = (
+				111111111111111111111202 /* Sources */,
+				111111111111111111111201 /* Frameworks */,
+				111111111111111111111203 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rule34Swift;
+			productName = Rule34Swift;
+			productReference = 111111111111111111111016 /* Rule34Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		111111111111111111111501 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					111111111111111111111401 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+				};
+			};
+			buildConfigurationList = 111111111111111111111700 /* Build configuration list for PBXProject "Rule34Swift" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 111111111111111111111301;
+			productRefGroup = 111111111111111111111309 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				111111111111111111111401 /* Rule34Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		111111111111111111111203 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				111111111111111111111118 /* Assets.xcassets in Resources */,
+				111111111111111111111147 /* en.lproj/Localizable.strings in Resources */,
+				111111111111111111111148 /* ru.lproj/Localizable.strings in Resources */,
+				0AD4617530A7020A00246F76 /* icons.icon in Resources */,
+				111111111111111111111149 /* en.lproj/InfoPlist.strings in Resources */,
+				111111111111111111111150 /* ru.lproj/InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		111111111111111111111202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				111111111111111111111101 /* Rule34SwiftApp.swift in Sources */,
+				111111111111111111111102 /* Rule34Post.swift in Sources */,
+				111111111111111111111103 /* AutocompleteItem.swift in Sources */,
+				111111111111111111111104 /* KeychainStore.swift in Sources */,
+				111111111111111111111105 /* AppSettings.swift in Sources */,
+				111111111111111111111106 /* FavoritesStore.swift in Sources */,
+				111111111111111111111116 /* ImageCacheStore.swift in Sources */,
+				111111111111111111111107 /* Rule34APIClient.swift in Sources */,
+				111111111111111111111108 /* GalleryViewModel.swift in Sources */,
+				111111111111111111111120 /* AppCoordinator.swift in Sources */,
+				111111111111111111111126 /* Rule34AccountService.swift in Sources */,
+				111111111111111111111128 /* Rule34TagMetadataStore.swift in Sources */,
+				111111111111111111111109 /* GlassCompat.swift in Sources */,
+				111111111111111111111110 /* ContentView.swift in Sources */,
+				111111111111111111111111 /* GalleryScreen.swift in Sources */,
+				111111111111111111111112 /* PostTile.swift in Sources */,
+				111111111111111111111113 /* PostDetailView.swift in Sources */,
+				111111111111111111111117 /* R34VideoPlayerView.swift in Sources */,
+				111111111111111111111119 /* String+HTMLDecoding.swift in Sources */,
+				111111111111111111111121 /* Rule34Comment.swift in Sources */,
+				111111111111111111111122 /* Rule34TagInfo.swift in Sources */,
+				111111111111111111111127 /* Rule34AuthWebView.swift in Sources */,
+				111111111111111111111123 /* Rule34WebView.swift in Sources */,
+				111111111111111111111124 /* ProfileView.swift in Sources */,
+				111111111111111111111125 /* PostInfoView.swift in Sources */,
+				111111111111111111111114 /* SettingsView.swift in Sources */,
+				111111111111111111111141 /* Sources/R34ImageProcessor.m in Sources */,
+				111111111111111111111142 /* Sources/R34NetworkManager.m in Sources */,
+				111111111111111111111143 /* Sources/R34BatchDownloader.m in Sources */,
+				111111111111111111111144 /* Sources/R34DataParser.m in Sources */,
+				111111111111111111111153 /* BulkDownloadView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		111111111111111111111601 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		111111111111111111111602 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		111111111111111111111603 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = icons;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=iphoneos*]" = icons;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ../Rule34Swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.local.Rule34Swift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = ../Rule34Swift/dylib/BridgingHeader.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		111111111111111111111604 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = icons;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=iphoneos*]" = icons;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ../Rule34Swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.local.Rule34Swift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = ../Rule34Swift/dylib/BridgingHeader.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		111111111111111111111700 /* Build configuration list for PBXProject "Rule34Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				111111111111111111111601 /* Debug */,
+				111111111111111111111602 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		111111111111111111111701 /* Build configuration list for PBXNativeTarget "Rule34Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				111111111111111111111603 /* Debug */,
+				111111111111111111111604 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 111111111111111111111501 /* Project object */;
+}

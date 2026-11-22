@@ -1,0 +1,261 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AFFE56930A8815100D2A0C1 /* icons.icon in Resources */ = {isa = PBXBuildFile; fileRef = 0AFFE56830A8815100D2A0C1 /* icons.icon */; };
+		AA000000000000000000065 /* App/Rule34MacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000001 /* App/Rule34MacApp.swift */; };
+		AA000000000000000000066 /* Views/MacContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000002 /* Views/MacContentView.swift */; };
+		AA000000000000000000067 /* ../Rule34Swift/Models/Rule34Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000003 /* ../Rule34Swift/Models/Rule34Post.swift */; };
+		AA000000000000000000068 /* ../Rule34Swift/Models/AutocompleteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000004 /* ../Rule34Swift/Models/AutocompleteItem.swift */; };
+		AA000000000000000000069 /* ../Rule34Swift/Models/Rule34Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000005 /* ../Rule34Swift/Models/Rule34Comment.swift */; };
+		AA00000000000000000006A /* ../Rule34Swift/Models/Rule34TagInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000006 /* ../Rule34Swift/Models/Rule34TagInfo.swift */; };
+		AA00000000000000000006B /* ../Rule34Swift/Services/AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000007 /* ../Rule34Swift/Services/AppSettings.swift */; };
+		AA00000000000000000006C /* ../Rule34Swift/Services/FavoritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000008 /* ../Rule34Swift/Services/FavoritesStore.swift */; };
+		AA00000000000000000006D /* ../Rule34Swift/Services/ImageCacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000009 /* ../Rule34Swift/Services/ImageCacheStore.swift */; };
+		AA00000000000000000006E /* ../Rule34Swift/Services/Rule34APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000A /* ../Rule34Swift/Services/Rule34APIClient.swift */; };
+		AA00000000000000000006F /* ../Rule34Swift/ViewModels/GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000B /* ../Rule34Swift/ViewModels/GalleryViewModel.swift */; };
+		AA000000000000000000070 /* ../Rule34Swift/Extensions/String+HTMLDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000C /* ../Rule34Swift/Extensions/String+HTMLDecoding.swift */; };
+		AA000000000000000000071 /* ../Rule34Swift/Services/Rule34TagMetadataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000D /* ../Rule34Swift/Services/Rule34TagMetadataStore.swift */; };
+		AA000000000000000000072 /* ../Rule34Swift/Services/KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000E /* ../Rule34Swift/Services/KeychainStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0AFFE56830A8815100D2A0C1 /* icons.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = icons.icon; sourceTree = "<group>"; };
+		AA000000000000000000001 /* App/Rule34MacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/Rule34MacApp.swift; sourceTree = SOURCE_ROOT; };
+		AA000000000000000000002 /* Views/MacContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/MacContentView.swift; sourceTree = SOURCE_ROOT; };
+		AA000000000000000000003 /* ../Rule34Swift/Models/Rule34Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Rule34Swift/Models/Rule34Post.swift; sourceTree = SOURCE_ROOT; };
+		AA000000000000000000004 /* ../Rule34Swift/Models/AutocompleteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Rule34Swift/Models/AutocompleteItem.swift; sourceTree = SOURCE_ROOT; };
+		AA000000000000000000005 /* ../Rule34Swift/Models/Rule34Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Rule34Swift/Models/Rule34Comment.swift; sourceTree = SOURCE_ROOT; };
+		AA000000000000000000006 /* ../Rule34Swift/Models/Rule34TagInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Rule34Swift/Models/Rule34TagInfo.swift; sourceTree = SOURCE_ROOT; };
+		AA000000000000000000007 /* ../Rule34Swift/Services/AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Rule34Swift/Services/AppSettings.swift; sourceTree = SOURCE_ROOT; };
+		AA000000000000000000008 /* ../Rule34Swift/Services/FavoritesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Rule34Swift/Services/FavoritesStore.swift; sourceTree = SOURCE_ROOT; };
+		AA000000000000000000009 /* ../Rule34Swift/Services/ImageCacheStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Rule34Swift/Services/ImageCacheStore.swift; sourceTree = SOURCE_ROOT; };
+		AA00000000000000000000A /* ../Rule34Swift/Services/Rule34APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Rule34Swift/Services/Rule34APIClient.swift; sourceTree = SOURCE_ROOT; };
+		AA00000000000000000000B /* ../Rule34Swift/ViewModels/GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Rule34Swift/ViewModels/GalleryViewModel.swift; sourceTree = SOURCE_ROOT; };
+		AA00000000000000000000C /* ../Rule34Swift/Extensions/String+HTMLDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../Rule34Swift/Extensions/String+HTMLDecoding.swift"; sourceTree = SOURCE_ROOT; };
+		AA00000000000000000000D /* ../Rule34Swift/Services/Rule34TagMetadataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Rule34Swift/Services/Rule34TagMetadataStore.swift; sourceTree = SOURCE_ROOT; };
+		AA00000000000000000000E /* ../Rule34Swift/Services/KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Rule34Swift/Services/KeychainStore.swift; sourceTree = SOURCE_ROOT; };
+		AA00000000000000000001E /* Rule34SwiftMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rule34SwiftMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA000000000000000000024 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA000000000000000000021 = {
+			isa = PBXGroup;
+			children = (
+				AA000000000000000000001 /* App/Rule34MacApp.swift */,
+				AA000000000000000000002 /* Views/MacContentView.swift */,
+				AA000000000000000000003 /* ../Rule34Swift/Models/Rule34Post.swift */,
+				AA000000000000000000004 /* ../Rule34Swift/Models/AutocompleteItem.swift */,
+				AA000000000000000000005 /* ../Rule34Swift/Models/Rule34Comment.swift */,
+				AA000000000000000000006 /* ../Rule34Swift/Models/Rule34TagInfo.swift */,
+				AA000000000000000000007 /* ../Rule34Swift/Services/AppSettings.swift */,
+				AA000000000000000000008 /* ../Rule34Swift/Services/FavoritesStore.swift */,
+				AA000000000000000000009 /* ../Rule34Swift/Services/ImageCacheStore.swift */,
+				AA00000000000000000000A /* ../Rule34Swift/Services/Rule34APIClient.swift */,
+				AA00000000000000000000B /* ../Rule34Swift/ViewModels/GalleryViewModel.swift */,
+				AA00000000000000000000C /* ../Rule34Swift/Extensions/String+HTMLDecoding.swift */,
+				AA00000000000000000000D /* ../Rule34Swift/Services/Rule34TagMetadataStore.swift */,
+				AA00000000000000000000E /* ../Rule34Swift/Services/KeychainStore.swift */,
+				0AFFE56830A8815100D2A0C1 /* icons.icon */,
+				AA000000000000000000022 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA000000000000000000022 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA00000000000000000001E /* Rule34SwiftMac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA00000000000000000001F /* Rule34SwiftMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA000000000000000000027 /* Build configuration list for PBXNativeTarget "Rule34SwiftMac" */;
+			buildPhases = (
+				AA000000000000000000023 /* Sources */,
+				AA000000000000000000024 /* Frameworks */,
+				AA000000000000000000025 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rule34SwiftMac;
+			productName = Rule34SwiftMac;
+			productReference = AA00000000000000000001E /* Rule34SwiftMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA000000000000000000020 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2650;
+				TargetAttributes = {
+					AA00000000000000000001F = {
+						CreatedOnToolsVersion = 26.5;
+					};
+				};
+			};
+			buildConfigurationList = AA000000000000000000026 /* Build configuration list for PBXProject "Rule34SwiftMac" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA000000000000000000021;
+			productRefGroup = AA000000000000000000022 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA00000000000000000001F /* Rule34SwiftMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA000000000000000000025 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AFFE56930A8815100D2A0C1 /* icons.icon in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA000000000000000000023 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000000000000000000065 /* App/Rule34MacApp.swift in Sources */,
+				AA000000000000000000066 /* Views/MacContentView.swift in Sources */,
+				AA000000000000000000067 /* ../Rule34Swift/Models/Rule34Post.swift in Sources */,
+				AA000000000000000000068 /* ../Rule34Swift/Models/AutocompleteItem.swift in Sources */,
+				AA000000000000000000069 /* ../Rule34Swift/Models/Rule34Comment.swift in Sources */,
+				AA00000000000000000006A /* ../Rule34Swift/Models/Rule34TagInfo.swift in Sources */,
+				AA00000000000000000006B /* ../Rule34Swift/Services/AppSettings.swift in Sources */,
+				AA00000000000000000006C /* ../Rule34Swift/Services/FavoritesStore.swift in Sources */,
+				AA00000000000000000006D /* ../Rule34Swift/Services/ImageCacheStore.swift in Sources */,
+				AA00000000000000000006E /* ../Rule34Swift/Services/Rule34APIClient.swift in Sources */,
+				AA00000000000000000006F /* ../Rule34Swift/ViewModels/GalleryViewModel.swift in Sources */,
+				AA000000000000000000070 /* ../Rule34Swift/Extensions/String+HTMLDecoding.swift in Sources */,
+				AA000000000000000000071 /* ../Rule34Swift/Services/Rule34TagMetadataStore.swift in Sources */,
+				AA000000000000000000072 /* ../Rule34Swift/Services/KeychainStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AA000000000000000000028 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AA000000000000000000029 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AA00000000000000000002A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = icons;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = icons;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rule34Swift Mac";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.local.Rule34SwiftMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AA00000000000000000002B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = icons;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = icons;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rule34Swift Mac";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.local.Rule34SwiftMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA000000000000000000026 /* Build configuration list for PBXProject "Rule34SwiftMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA000000000000000000028 /* Debug */,
+				AA000000000000000000029 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA000000000000000000027 /* Build configuration list for PBXNativeTarget "Rule34SwiftMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA00000000000000000002A /* Debug */,
+				AA00000000000000000002B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA000000000000000000020 /* Project object */;
+}

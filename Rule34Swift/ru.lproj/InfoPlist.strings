@@ -1,0 +1,3 @@
+"NSFaceIDUsageDescription" = "Face ID разблокирует приватный просмотрщик.";
+"NSPhotoLibraryAddUsageDescription" = "Приложению нужен доступ к медиатеке для сохранения файлов.";
+"NSPhotoLibraryUsageDescription" = "Приложению нужен доступ к медиатеке для отображения и выбора альбома.";
