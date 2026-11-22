@@ -35,9 +35,13 @@ Rule34Swift is an ad-free client for searching and viewing posts from Rule34.xxx
 - Native Mac deployment target: **macOS 13 or later**.
 - API user ID and key are needed when using the API search source. Website/booru search is selected by default.
 
+### Privacy and credentials
+
+The API user ID and key are stored locally in the system Keychain, which macOS protects and controls. If macOS asks for your login or Keychain password, it is requesting authorization to access those saved credentials. The app uses them for requests to Rule34.xxx when API mode is selected.
+
 ### Build
 
-Run the build script from the repository root. With no argument, it opens a menu where you can choose iOS IPA or the native macOS app:
+Run the build script from the repository root. With no argument, it opens a menu where you can choose iOS, native macOS, or both release builds:
 
 ```sh
 ./build.sh
@@ -48,9 +52,10 @@ You can also choose a target directly:
 ```sh
 ./build.sh ios
 ./build.sh mac
+./build.sh github
 ```
 
-The macOS app is written to `macOS/build/Rule34SwiftMac.app`; the iOS build creates `Rule34Swift.ipa` in the repository root. These are development builds: they use ad-hoc signing and are not notarized or prepared for App Store release.
+The `github` target creates `Rule34Swift.ipa` and `Rule34SwiftMac.dmg` in the repository root. The DMG contains the macOS app and an Applications shortcut. The `mac` target also copies the standalone app to `macOS/build/Rule34SwiftMac.app`. These are development builds: they use ad-hoc signing and are not notarized or prepared for App Store release. The script prepares local files; publish them to a GitHub Release manually.
 
 You can also open either project in Xcode:
 
@@ -99,9 +104,13 @@ Rule34Swift — клиент без рекламы для поиска и про
 - Минимальная версия нативного приложения для Mac: **macOS 13**.
 - Для поиска через API нужны ID пользователя и API-ключ. По умолчанию выбран поиск через сайт/booru.
 
+### Конфиденциальность и данные доступа
+
+ID пользователя и API-ключ хранятся локально в системном Связке ключей, доступ к которому контролирует macOS. Если система попросит пароль пользователя Mac или Связки ключей, она запрашивает разрешение на доступ к сохранённым данным. Приложение использует их для запросов к Rule34.xxx, когда выбран режим API.
+
 ### Сборка
 
-Запусти скрипт из корневой папки проекта. Без аргумента появится меню выбора: iOS IPA или нативное приложение macOS.
+Запусти скрипт из корневой папки проекта. Без аргумента появится меню выбора: iOS IPA, нативное приложение macOS или оба файла для релиза.
 
 ```sh
 ./build.sh
@@ -112,9 +121,10 @@ Rule34Swift — клиент без рекламы для поиска и про
 ```sh
 ./build.sh ios
 ./build.sh mac
+./build.sh github
 ```
 
-Приложение macOS появится в `macOS/build/Rule34SwiftMac.app`, а файл iOS — в корневой папке как `Rule34Swift.ipa`. Это сборки для разработки: они подписываются ad-hoc, не проходят нотариальное заверение и не подготовлены к публикации в App Store.
+Команда `github` создаёт в корне `Rule34Swift.ipa` и `Rule34SwiftMac.dmg`. В DMG находятся приложение macOS и ярлык Applications. Команда `mac` также сохраняет отдельное приложение в `macOS/build/Rule34SwiftMac.app`. Это сборки для разработки: они подписываются ad-hoc, не проходят нотариальное заверение и не подготовлены к публикации в App Store. Скрипт готовит файлы локально; в GitHub Releases их нужно загрузить вручную.
 
 Проекты можно открыть и собрать в Xcode:
 
