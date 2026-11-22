@@ -72,6 +72,11 @@ Choose the `Rule34SwiftMac` or `Rule34Swift` scheme, respectively.
 
 The iOS and macOS apps keep their local app data separately. Use the favorites JSON import/export to move a collection between them.
 
+### Credits
+
+- **Ruxx** was reviewed as a reference while researching downloader options: [trickerer01/Ruxx](https://github.com/trickerer01/Ruxx).
+- The current app icon uses artwork by [Paschi on Rule34.xxx](https://rule34.xxx/index.php?page=account&s=profile&uname=paschi). The icon is still in development and may change.
+
 ## Русский
 
 Rule34Swift — клиент без рекламы для поиска и просмотра публикаций с Rule34.xxx. В проект входят отдельные приложения для iOS и macOS, которые используют общие сетевые службы, модели, избранное, настройки и кэш изображений.
@@ -131,3 +136,8 @@ open iOS/Rule34Swift.xcodeproj
 | `macOS/` | Нативное приложение и проект Xcode для macOS |
 
 Приложения для iOS и macOS хранят данные отдельно. Перенести избранное между ними можно через импорт и экспорт JSON.
+
+### Благодарности
+
+- **Ruxx** мы изучали как ориентир при поиске решения для загрузчика: [trickerer01/Ruxx](https://github.com/trickerer01/Ruxx).
+- В текущей иконке используется artwork автора [Paschi на Rule34.xxx](https://rule34.xxx/index.php?page=account&s=profile&uname=paschi). Иконка ещё в разработке и может измениться.
