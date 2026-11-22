@@ -6,7 +6,6 @@ import LocalAuthentication
 struct ContentView: View {
     @ObservedObject var settings: AppSettings
     @StateObject private var coordinator = AppCoordinator()
-    @AppStorage("rule34.ageConfirmed") private var ageConfirmed = false
     @Environment(\.scenePhase) private var scenePhase
     @State private var isObscured = false
     @State private var isAppLocked = false
@@ -19,17 +18,11 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            if ageConfirmed {
-                #if os(macOS)
-                macOSContent
-                #else
-                iOSContent
-                #endif
-            } else {
-                AgeGateView {
-                    ageConfirmed = true
-                }
-            }
+            #if os(macOS)
+            macOSContent
+            #else
+            iOSContent
+            #endif
         }
         .blur(radius: isAppLocked ? 22 : 0)
         .overlay {
@@ -54,12 +47,11 @@ struct ContentView: View {
                 appLockOverlay
             }
         }
-        .task(id: ageConfirmed) {
-            guard ageConfirmed else { return }
+        .task {
             await requestUnlockIfNeeded()
         }
         .onChange(of: settings.appLockEnabled) { enabled in
-            if enabled && ageConfirmed {
+            if enabled {
                 shouldAutoAuthenticate = true
                 #if targetEnvironment(macCatalyst) || os(macOS)
                 hasUnlockedOnMacThisLaunch = false
@@ -77,12 +69,10 @@ struct ContentView: View {
                 withAnimation(.easeOut(duration: 0.25)) {
                     isObscured = false
                 }
-                if ageConfirmed {
-                    // Re-authenticate only after the app was locked again.
-                    // A successful Face ID request sets isAppLocked to false.
-                    if isAppLocked && !isAuthenticating && shouldAutoAuthenticate {
-                        Task { await requestUnlockIfNeeded() }
-                    }
+                // Re-authenticate only after the app was locked again.
+                // A successful Face ID request sets isAppLocked to false.
+                if isAppLocked && !isAuthenticating && shouldAutoAuthenticate {
+                    Task { await requestUnlockIfNeeded() }
                 }
             } else if newPhase == .inactive || newPhase == .background {
                 withAnimation(.easeIn(duration: 0.2)) {
@@ -300,39 +290,5 @@ struct ContentView: View {
                 }
         }
         .tint(.orange)
-    }
-}
-
-private struct AgeGateView: View {
-    let onContinue: () -> Void
-
-    var body: some View {
-        ZStack {
-            LinearGradient(colors: [.black, .gray.opacity(0.45), .black], startPoint: .topLeading, endPoint: .bottomTrailing)
-                .ignoresSafeArea()
-
-            VStack(alignment: .leading, spacing: 18) {
-                Image(systemName: "lock.shield.fill")
-                    .font(.system(size: 42))
-                    .foregroundStyle(.orange)
-
-                Text("Private Viewer")
-                    .font(.largeTitle.bold())
-
-                Text("This app is intended for a private local build. Continue only if you are allowed to view this content in your region.")
-                    .foregroundStyle(.secondary)
-
-                Button(action: onContinue) {
-                    Label("Continue", systemImage: "arrow.right")
-                        .frame(maxWidth: .infinity)
-                }
-                .buttonStyle(.borderedProminent)
-                .controlSize(.large)
-                .tint(.orange)
-            }
-            .padding(22)
-            .r34Glass(cornerRadius: 24, interactive: true)
-            .padding(24)
-        }
     }
 }
