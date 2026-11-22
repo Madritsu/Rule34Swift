@@ -37,17 +37,6 @@ Rule34Swift is an ad-free client for searching and viewing posts from Rule34.xxx
 
 ### Build
 
-#### Build on GitHub
-
-After the workflow is pushed to GitHub, open the repository's **Actions** tab, select **Build and release Rule34Swift**, and click **Run workflow**. Enter a new version tag such as `v1.0.0`. A short release intro is optional; if you leave it blank, GitHub generates the release notes automatically. The workflow builds both apps and publishes a release with these assets:
-
-- `Rule34Swift-iOS.ipa`
-- `Rule34Swift-macOS.dmg`
-
-The workflow runs on a GitHub-hosted macOS machine because Xcode builds for Apple platforms require macOS. Its configuration is in `.github/workflows/build.yml`. Automatic notes are based on changes since the previous release; descriptive commit or pull request titles make them easier to read.
-
-#### Build locally
-
 Run the build script from the repository root. With no argument, it opens a menu where you can choose iOS IPA or the native macOS app:
 
 ```sh
@@ -111,17 +100,6 @@ Rule34Swift — клиент без рекламы для поиска и про
 - Для поиска через API нужны ID пользователя и API-ключ. По умолчанию выбран поиск через сайт/booru.
 
 ### Сборка
-
-#### Сборка на GitHub
-
-После отправки workflow на GitHub открой вкладку **Actions**, выбери **Build and release Rule34Swift** и нажми **Run workflow**. Укажи новый тег версии, например `v1.0.0`. Короткое вступление к описанию релиза можно написать по желанию; если оставить поле пустым, GitHub автоматически сформирует список изменений. Workflow соберёт оба приложения и опубликует релиз с файлами:
-
-- `Rule34Swift-iOS.ipa`
-- `Rule34Swift-macOS.dmg`
-
-Сборка запускается на macOS-машине GitHub, потому что Xcode собирает приложения для платформ Apple на macOS. Настройки workflow находятся в `.github/workflows/build.yml`. Автоматическое описание формируется по изменениям с прошлого релиза; понятные названия коммитов и pull request делают его легче для чтения.
-
-#### Локальная сборка
 
 Запусти скрипт из корневой папки проекта. Без аргумента появится меню выбора: iOS IPA или нативное приложение macOS.
 
