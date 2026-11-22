@@ -147,10 +147,6 @@ struct SettingsView: View {
                     }
                 }
 
-                Section {
-                    Text("Login cookies, account comments, and saving favorites to the website profile can be added later through WKWebView.")
-                        .foregroundStyle(.secondary)
-                }
             }
             .navigationTitle("Settings")
             .toolbar {

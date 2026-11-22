@@ -41,7 +41,6 @@
 "Cache" = "Кэш";
 "Image cache" = "Кэш изображений";
 "Clear image cache" = "Очистить кэш изображений";
-"Login cookies, account comments, and saving favorites to the website profile can be added later through WKWebView." = "Вход через cookies, комментарии аккаунта и сохранение избранного в профиль сайта можно добавить позднее через WKWebView.";
 "tags, e.g. neko highres" = "теги, например neko highres";
 "Loading" = "Загрузка";
 "Browsing" = "Просмотр";
