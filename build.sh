@@ -15,6 +15,9 @@ SYMROOT="$BUILD_ROOT/build"
 DERIVED_DATA="$BUILD_ROOT/DerivedData"
 
 cleanup() {
+  if [ -n "${DMG_MOUNT:-}" ]; then
+    hdiutil detach -quiet "$DMG_MOUNT" >/dev/null 2>&1 || true
+  fi
   rm -rf "$BUILD_ROOT"
 }
 trap cleanup EXIT
@@ -144,16 +147,73 @@ if [ "$BUILD_TARGET" = "mac" ] || [ "$BUILD_TARGET" = "github" ]; then
   if [ "$BUILD_TARGET" = "github" ]; then
     echo "=== Creating macOS DMG ==="
     DMG_ROOT="$BUILD_ROOT/dmg-root"
+    DMG_MOUNT="$BUILD_ROOT/dmg-mount"
+    TEMP_DMG="$BUILD_ROOT/Rule34SwiftMac-rw.dmg"
     mkdir -p "$DMG_ROOT"
     ditto "$ROOT_DIR/macOS/build/$TARGET_MAC_APP" "$DMG_ROOT/$TARGET_MAC_APP"
-    ln -s /Applications "$DMG_ROOT/Applications"
+    mkdir -p "$DMG_MOUNT"
     rm -f "$ROOT_DIR/$DMG_NAME"
+
     hdiutil create \
       -volname "Rule34Swift" \
       -srcfolder "$DMG_ROOT" \
       -ov \
+      -format UDRW \
+      "$TEMP_DMG"
+
+    hdiutil attach \
+      -readwrite \
+      -noverify \
+      -noautoopen \
+      -mountpoint "$DMG_MOUNT" \
+      "$TEMP_DMG"
+
+    osascript - "$DMG_MOUNT" <<'APPLESCRIPT'
+on run argv
+  set mountFolder to POSIX file (item 1 of argv) as alias
+  set applicationsFolder to POSIX file "/Applications" as alias
+
+  tell application "Finder"
+    make new alias file at mountFolder to applicationsFolder with properties {name:"Applications"}
+  end tell
+end run
+APPLESCRIPT
+
+    swift "$ROOT_DIR/macOS/Scripts/SetDMGApplicationsIcon.swift" "$DMG_MOUNT/Applications"
+
+    osascript - "$DMG_MOUNT" <<'APPLESCRIPT'
+on run argv
+  set mountFolder to POSIX file (item 1 of argv) as alias
+  tell application "Finder"
+    set dmgWindow to open mountFolder
+    set current view of dmgWindow to icon view
+    set toolbar visible of dmgWindow to false
+    set statusbar visible of dmgWindow to false
+    set bounds of dmgWindow to {120, 100, 1020, 660}
+
+    tell icon view options of dmgWindow
+      set arrangement to not arranged
+      set icon size to 112
+      set text size to 14
+      set label position to bottom
+      set background color to {43690, 58853, 42148}
+    end tell
+
+    set position of item "Rule34SwiftMac.app" of mountFolder to {225, 295}
+    set position of item "Applications" of mountFolder to {690, 295}
+    close dmgWindow
+  end tell
+end run
+APPLESCRIPT
+
+    sync
+    hdiutil detach -quiet "$DMG_MOUNT"
+    DMG_MOUNT=""
+
+    hdiutil convert "$TEMP_DMG" \
+      -ov \
       -format UDZO \
-      "$ROOT_DIR/$DMG_NAME"
+      -o "$ROOT_DIR/$DMG_NAME"
 
     echo "=== GitHub release files ready ==="
     echo "iOS: $ROOT_DIR/$IPA_NAME"
