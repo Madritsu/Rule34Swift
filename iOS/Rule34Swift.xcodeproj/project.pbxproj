@@ -37,13 +37,11 @@
 		111111111111111111111128 /* Rule34TagMetadataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111030 /* Rule34TagMetadataStore.swift */; };
 		111111111111111111111141 /* Sources/R34ImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111131 /* Sources/R34ImageProcessor.m */; };
 		111111111111111111111142 /* Sources/R34NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111132 /* Sources/R34NetworkManager.m */; };
-		111111111111111111111143 /* Sources/R34BatchDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111133 /* Sources/R34BatchDownloader.m */; };
 		111111111111111111111144 /* Sources/R34DataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111134 /* Sources/R34DataParser.m */; };
 		111111111111111111111147 /* en.lproj/Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111138 /* en.lproj/Localizable.strings */; };
 		111111111111111111111148 /* ru.lproj/Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111139 /* ru.lproj/Localizable.strings */; };
 		111111111111111111111149 /* en.lproj/InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111151 /* en.lproj/InfoPlist.strings */; };
 		111111111111111111111150 /* ru.lproj/InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111152 /* ru.lproj/InfoPlist.strings */; };
-		111111111111111111111153 /* BulkDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111154 /* BulkDownloadView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,7 +77,6 @@
 		111111111111111111111030 /* Rule34TagMetadataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule34TagMetadataStore.swift; sourceTree = "<group>"; };
 		111111111111111111111131 /* Sources/R34ImageProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sources/R34ImageProcessor.m; sourceTree = "<group>"; };
 		111111111111111111111132 /* Sources/R34NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sources/R34NetworkManager.m; sourceTree = "<group>"; };
-		111111111111111111111133 /* Sources/R34BatchDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sources/R34BatchDownloader.m; sourceTree = "<group>"; };
 		111111111111111111111134 /* Sources/R34DataParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sources/R34DataParser.m; sourceTree = "<group>"; };
 		111111111111111111111136 /* Headers/R34Optimizations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Headers/R34Optimizations.h; sourceTree = "<group>"; };
 		111111111111111111111137 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
@@ -87,7 +84,6 @@
 		111111111111111111111139 /* ru.lproj/Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		111111111111111111111151 /* en.lproj/InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		111111111111111111111152 /* ru.lproj/InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		111111111111111111111154 /* BulkDownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulkDownloadView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +176,6 @@
 				111111111111111111111011 /* GalleryScreen.swift */,
 				111111111111111111111012 /* PostTile.swift */,
 				111111111111111111111013 /* PostDetailView.swift */,
-				111111111111111111111154 /* BulkDownloadView.swift */,
 				111111111111111111111019 /* R34VideoPlayerView.swift */,
 				111111111111111111111029 /* Rule34AuthWebView.swift */,
 				111111111111111111111025 /* Rule34WebView.swift */,
@@ -214,7 +209,6 @@
 				111111111111111111111137 /* BridgingHeader.h */,
 				111111111111111111111131 /* Sources/R34ImageProcessor.m */,
 				111111111111111111111132 /* Sources/R34NetworkManager.m */,
-				111111111111111111111133 /* Sources/R34BatchDownloader.m */,
 				111111111111111111111134 /* Sources/R34DataParser.m */,
 			);
 			path = dylib;
@@ -322,9 +316,7 @@
 				111111111111111111111114 /* SettingsView.swift in Sources */,
 				111111111111111111111141 /* Sources/R34ImageProcessor.m in Sources */,
 				111111111111111111111142 /* Sources/R34NetworkManager.m in Sources */,
-				111111111111111111111143 /* Sources/R34BatchDownloader.m in Sources */,
 				111111111111111111111144 /* Sources/R34DataParser.m in Sources */,
-				111111111111111111111153 /* BulkDownloadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

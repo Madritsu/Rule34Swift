@@ -115,15 +115,6 @@ final class Rule34APIClient {
         return posts.first
     }
 
-    func fetchPostsForDownload(tags: String, page: Int, userID: String, apiKey: String) async throws -> [Rule34Post] {
-        let cleanUserID = userID.trimmingCharacters(in: .whitespacesAndNewlines)
-        let cleanAPIKey = apiKey.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !cleanUserID.isEmpty, !cleanAPIKey.isEmpty else {
-            throw Rule34APIError.missingCredentials
-        }
-        return try await fetchPosts(tags: normalizeTagQuery(tags), page: page, userID: cleanUserID, apiKey: cleanAPIKey)
-    }
-
     func fetchComments(postID: String, userID: String? = nil, apiKey: String? = nil) async throws -> [Rule34Comment] {
         var components = URLComponents(string: "https://api.rule34.xxx/index.php")!
         var items: [URLQueryItem] = [

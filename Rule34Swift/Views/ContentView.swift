@@ -240,8 +240,6 @@ struct ContentView: View {
                         .tag(AppCoordinator.Tab.search)
                     Label("Favorites", systemImage: "heart.fill")
                         .tag(AppCoordinator.Tab.favorites)
-                    Label("Downloads", systemImage: "arrow.down.circle.fill")
-                        .tag(AppCoordinator.Tab.downloads)
                 }
 
                 if showsProfileTab {
@@ -263,8 +261,6 @@ struct ContentView: View {
                 GalleryScreen(settings: settings, coordinator: coordinator, mode: .search)
             case .favorites:
                 GalleryScreen(settings: settings, coordinator: coordinator, mode: .favorites)
-            case .downloads:
-                BulkDownloadView(settings: settings)
             case .profile:
                 ProfileView(settings: settings, coordinator: coordinator)
             case .settings:
@@ -287,12 +283,6 @@ struct ContentView: View {
                 .tag(AppCoordinator.Tab.favorites)
                 .tabItem {
                     Label("Favorites", systemImage: "heart.fill")
-                }
-
-            BulkDownloadView(settings: settings)
-                .tag(AppCoordinator.Tab.downloads)
-                .tabItem {
-                    Label("Downloads", systemImage: "arrow.down.circle.fill")
                 }
 
             if showsProfileTab {

@@ -48,26 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-// MARK: - Module 3: Batch Downloader
-
-@interface R34BatchDownloader : NSObject
-
-@property (nonatomic, readonly) NSUInteger maxConcurrent;
-
-/// Create a downloader with a concurrency limit (default 4).
-- (instancetype)initWithMaxConcurrent:(NSUInteger)max;
-
-/// Download a single file to disk. Reports progress per-chunk.
-- (void)downloadURL:(NSURL *)url
-             toFile:(NSURL *)fileURL
-        completion:(void (^)(BOOL success, NSError * _Nullable error))completion;
-
-/// Cancel all in-flight downloads.
-- (void)cancelAll;
-
-@end
-
-// MARK: - Module 4: Data Parser
+// MARK: - Module 3: Data Parser
 
 @interface R34DataParser : NSObject
 

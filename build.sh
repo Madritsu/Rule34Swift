@@ -7,6 +7,7 @@ MAC_PROJECT="macOS/Rule34SwiftMac.xcodeproj"
 MAC_SCHEME="Rule34SwiftMac"
 TARGET_APP_NAME="Rule34Swift-Unsigned.app"
 IPA_NAME="Rule34Swift.ipa"
+DMG_NAME="Rule34SwiftMac.dmg"
 
 ROOT_DIR="$(pwd)"
 BUILD_ROOT="$(mktemp -d /tmp/r34swift-build.XXXXXX)"
@@ -31,8 +32,11 @@ if [ $# -ge 1 ]; then
     mac|macos)
       BUILD_TARGET="mac"
       ;;
+    github)
+      BUILD_TARGET="github"
+      ;;
     *)
-      echo "Unknown target: $1. Valid targets: iphone, mac"
+      echo "Unknown target: $1. Valid targets: ios, mac, github"
       exit 1
       ;;
   esac
@@ -40,13 +44,17 @@ else
   echo "=== Select Build Target ==="
   echo "1) iPhone (iOS .ipa)"
   echo "2) Mac (native macOS .app)"
-  read -rp "Enter choice [1-2]: " CHOICE
+  echo "3) GitHub release files (iOS .ipa + macOS .dmg)"
+  read -rp "Enter choice [1-3]: " CHOICE
   case "$CHOICE" in
     1)
       BUILD_TARGET="iphone"
       ;;
     2)
       BUILD_TARGET="mac"
+      ;;
+    3)
+      BUILD_TARGET="github"
       ;;
     *)
       echo "Invalid choice: $CHOICE"
@@ -58,7 +66,7 @@ fi
 echo "=== Start project build ($BUILD_TARGET) ==="
 echo "Using local temp build root: $BUILD_ROOT"
 
-if [ "$BUILD_TARGET" = "iphone" ]; then
+if [ "$BUILD_TARGET" = "iphone" ] || [ "$BUILD_TARGET" = "github" ]; then
   # Build to local temp directories to avoid VMware Shared Folders I/O issues.
   xcodebuild clean build \
     -project "$IOS_PROJECT" \
@@ -96,7 +104,11 @@ if [ "$BUILD_TARGET" = "iphone" ]; then
 
   echo "=== Done: $ROOT_DIR/$IPA_NAME ==="
 
-elif [ "$BUILD_TARGET" = "mac" ]; then
+fi
+
+if [ "$BUILD_TARGET" = "mac" ] || [ "$BUILD_TARGET" = "github" ]; then
+  # The iOS packaging step changes the working directory; resolve project paths from the repo root.
+  cd "$ROOT_DIR"
   # Build the independent native macOS application.
   xcodebuild clean build \
     -project "$MAC_PROJECT" \
@@ -128,4 +140,23 @@ elif [ "$BUILD_TARGET" = "mac" ]; then
   cp -R "$TARGET_MAC_APP" "$ROOT_DIR/macOS/build/"
 
   echo "=== Done: $ROOT_DIR/macOS/build/$TARGET_MAC_APP ==="
+
+  if [ "$BUILD_TARGET" = "github" ]; then
+    echo "=== Creating macOS DMG ==="
+    DMG_ROOT="$BUILD_ROOT/dmg-root"
+    mkdir -p "$DMG_ROOT"
+    ditto "$ROOT_DIR/macOS/build/$TARGET_MAC_APP" "$DMG_ROOT/$TARGET_MAC_APP"
+    ln -s /Applications "$DMG_ROOT/Applications"
+    rm -f "$ROOT_DIR/$DMG_NAME"
+    hdiutil create \
+      -volname "Rule34Swift" \
+      -srcfolder "$DMG_ROOT" \
+      -ov \
+      -format UDZO \
+      "$ROOT_DIR/$DMG_NAME"
+
+    echo "=== GitHub release files ready ==="
+    echo "iOS: $ROOT_DIR/$IPA_NAME"
+    echo "macOS: $ROOT_DIR/$DMG_NAME"
+  fi
 fi

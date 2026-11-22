@@ -5,7 +5,6 @@ final class AppCoordinator: ObservableObject {
     enum Tab: Hashable {
         case search
         case favorites
-        case downloads
         case profile
         case settings
     }
