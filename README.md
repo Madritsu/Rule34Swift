@@ -16,7 +16,7 @@
 
 Rule34Swift is an ad-free client for searching and viewing posts from Rule34.xxx. The project contains separate iOS and native macOS apps, with shared networking, models, favorites, settings, and image caching.
 
-> **Content notice:** This client can display adult material hosted by Rule34.xxx. Follow the site's terms and the laws that apply to you.
+> **Content notice:** Rule34.xxx is an 18+ site, and this app displays adult material hosted there. Follow the site's terms and the laws that apply to you.
 
 ### Features
 
@@ -85,7 +85,7 @@ The iOS and macOS apps keep their local app data separately. Use the favorites J
 
 Rule34Swift — клиент без рекламы для поиска и просмотра публикаций с Rule34.xxx. В проект входят отдельные приложения для iOS и macOS, которые используют общие сетевые службы, модели, избранное, настройки и кэш изображений.
 
-> **Предупреждение о содержимом:** приложение может показывать материалы для взрослых с Rule34.xxx. Соблюдайте правила сайта и законы вашей страны.
+> **Предупреждение о содержимом:** Rule34.xxx — сайт категории 18+, и приложение показывает размещённые там материалы для взрослых. Соблюдайте правила сайта и законы вашей страны.
 
 ### Возможности
 
