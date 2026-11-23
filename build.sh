@@ -185,13 +185,13 @@ APPLESCRIPT
 on run argv
   set mountFolder to POSIX file (item 1 of argv) as alias
   tell application "Finder"
-    set dmgWindow to open mountFolder
-    set current view of dmgWindow to icon view
-    set toolbar visible of dmgWindow to false
-    set statusbar visible of dmgWindow to false
-    set bounds of dmgWindow to {120, 100, 1020, 660}
+    open mountFolder
+    set current view of front Finder window to icon view
+    set toolbar visible of front Finder window to false
+    set statusbar visible of front Finder window to false
+    set bounds of front Finder window to {120, 100, 1020, 660}
 
-    tell icon view options of dmgWindow
+    tell icon view options of front Finder window
       set arrangement to not arranged
       set icon size to 112
       set text size to 14
@@ -199,9 +199,9 @@ on run argv
       set background color to {43690, 58853, 42148}
     end tell
 
-    set position of item "Rule34SwiftMac.app" of mountFolder to {225, 295}
-    set position of item "Applications" of mountFolder to {690, 295}
-    close dmgWindow
+    set position of item "Rule34SwiftMac.app" of mountFolder to {225, 225}
+    set position of item "Applications" of mountFolder to {690, 225}
+    close front Finder window
   end tell
 end run
 APPLESCRIPT

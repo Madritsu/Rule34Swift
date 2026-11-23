@@ -7,49 +7,13 @@ guard CommandLine.arguments.count == 2 else {
 }
 
 let iconSize = NSSize(width: 512, height: 512)
-let icon = NSImage(size: iconSize)
+let icon = NSWorkspace.shared.icon(forFile: "/Applications")
+icon.size = iconSize
 icon.lockFocus()
-
-let folderTab = NSBezierPath(
-    roundedRect: NSRect(x: 70, y: 315, width: 230, height: 100),
-    xRadius: 30,
-    yRadius: 30
-)
-NSColor(calibratedRed: 0.37, green: 0.78, blue: 0.49, alpha: 1).setFill()
-folderTab.fill()
-
-let folderBody = NSBezierPath(
-    roundedRect: NSRect(x: 42, y: 88, width: 428, height: 300),
-    xRadius: 48,
-    yRadius: 48
-)
-NSColor(calibratedRed: 0.12, green: 0.53, blue: 0.30, alpha: 1).setFill()
-folderBody.fill()
-
-NSColor(calibratedWhite: 1, alpha: 0.24).setStroke()
-folderBody.lineWidth = 8
-folderBody.stroke()
-
-let gridOrigin = NSPoint(x: 193, y: 190)
-let squareSize: CGFloat = 46
-let gap: CGFloat = 20
-for row in 0..<2 {
-    for column in 0..<2 {
-        let square = NSBezierPath(
-            roundedRect: NSRect(
-                x: gridOrigin.x + CGFloat(column) * (squareSize + gap),
-                y: gridOrigin.y + CGFloat(row) * (squareSize + gap),
-                width: squareSize,
-                height: squareSize
-            ),
-            xRadius: 11,
-            yRadius: 11
-        )
-        NSColor(calibratedWhite: 1, alpha: 0.92).setFill()
-        square.fill()
-    }
-}
-
+NSColor(calibratedRed: 0.20, green: 0.76, blue: 0.36, alpha: 0.58).setFill()
+NSGraphicsContext.current?.compositingOperation = .sourceAtop
+NSBezierPath(rect: NSRect(origin: .zero, size: iconSize)).fill()
+NSGraphicsContext.current?.compositingOperation = .sourceOver
 icon.unlockFocus()
 
 let aliasPath = CommandLine.arguments[1]
