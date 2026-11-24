@@ -1,5 +1,7 @@
 <div align="center">
-  <img src="docs/assets/app-icon.png" width="112" alt="Rule34Swift app icon">
+  <img src="docs/assets/app-icon.png" width="112" alt="Temporary Xcode app icon grid placeholder">
+  <p><sub>Custom app icon is in development; the app temporarily uses a placeholder.</sub></p>
+  <p><sub>Собственная иконка приложения в разработке; пока используется временная заглушка.</sub></p>
   <h1>Rule34Swift</h1>
   <p>A native SwiftUI client for browsing Rule34.xxx on iPhone, iPad, and macOS.</p>
 
@@ -16,7 +18,7 @@
 
 Rule34Swift is an ad-free client for searching and viewing posts from Rule34.xxx. The project contains separate iOS and native macOS apps, with shared networking, models, favorites, settings, and image caching.
 
-> **Content notice:** This client can display adult material hosted by Rule34.xxx. Follow the site's terms and the laws that apply to you.
+> **Content notice:** Rule34.xxx is an 18+ site, and this app displays adult material hosted there. Follow the site's terms and the laws that apply to you.
 
 ### Features
 
@@ -66,6 +68,16 @@ open iOS/Rule34Swift.xcodeproj
 
 Choose the `Rule34SwiftMac` or `Rule34Swift` scheme, respectively.
 
+### Opening the macOS app
+
+The macOS build is ad-hoc signed and is not notarized, so Gatekeeper may block it on first launch. After trying to open the app, go to **System Settings → Privacy & Security**, scroll to **Security**, choose **Open Anyway** for Rule34SwiftMac, then confirm **Open**. See [Apple's instructions](https://support.apple.com/en-us/102445).
+
+If you trust the copy downloaded from this repository, you can instead remove its quarantine attribute in Terminal:
+
+```sh
+xattr -cr /Applications/Rule34SwiftMac.app
+```
+
 ### Project layout
 
 | Path | Contents |
@@ -79,13 +91,12 @@ The iOS and macOS apps keep their local app data separately. Use the favorites J
 ### Credits
 
 - **Ruxx** was reviewed as a reference while researching downloader options: [trickerer01/Ruxx](https://github.com/trickerer01/Ruxx).
-- The current app icon uses artwork by [Paschi on Rule34.xxx](https://rule34.xxx/index.php?page=account&s=profile&uname=paschi). The icon is still in development and may change.
 
 ## Русский
 
 Rule34Swift — клиент без рекламы для поиска и просмотра публикаций с Rule34.xxx. В проект входят отдельные приложения для iOS и macOS, которые используют общие сетевые службы, модели, избранное, настройки и кэш изображений.
 
-> **Предупреждение о содержимом:** приложение может показывать материалы для взрослых с Rule34.xxx. Соблюдайте правила сайта и законы вашей страны.
+> **Предупреждение о содержимом:** Rule34.xxx — сайт категории 18+, и приложение показывает размещённые там материалы для взрослых. Соблюдайте правила сайта и законы вашей страны.
 
 ### Возможности
 
@@ -135,6 +146,16 @@ open iOS/Rule34Swift.xcodeproj
 
 Для Mac выберите схему `Rule34SwiftMac`, для iOS — `Rule34Swift`.
 
+### Первый запуск приложения на macOS
+
+Сборка для macOS подписана ad-hoc и не нотариально заверена, поэтому Gatekeeper может заблокировать первый запуск. Сначала попробуй открыть приложение, затем зайди в **Системные настройки → Конфиденциальность и безопасность**, прокрути до раздела **Безопасность**, нажми **Всё равно открыть** напротив Rule34SwiftMac и подтверди запуск. Подробности — в [инструкции Apple](https://support.apple.com/en-us/102445).
+
+Если ты доверяешь копии, загруженной из этого репозитория, можно вместо этого удалить атрибут карантина через Терминал:
+
+```sh
+xattr -cr /Applications/Rule34SwiftMac.app
+```
+
 ### Структура проекта
 
 | Путь | Содержимое |
@@ -148,4 +169,3 @@ open iOS/Rule34Swift.xcodeproj
 ### Благодарности
 
 - **Ruxx** мы изучали как ориентир при поиске решения для загрузчика: [trickerer01/Ruxx](https://github.com/trickerer01/Ruxx).
-- В текущей иконке используется artwork автора [Paschi на Rule34.xxx](https://rule34.xxx/index.php?page=account&s=profile&uname=paschi). Иконка ещё в разработке и может измениться.
