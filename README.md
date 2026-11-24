@@ -1,7 +1,5 @@
 <div align="center">
-  <img src="docs/assets/app-icon.png" width="112" alt="Temporary Xcode app icon grid placeholder">
-  <p><sub>Custom app icon is in development; the app temporarily uses a placeholder.</sub></p>
-  <p><sub>Собственная иконка приложения в разработке; пока используется временная заглушка.</sub></p>
+  <img src="docs/assets/app-icon.png" width="112" alt="Rule34Swift app icon">
   <h1>Rule34Swift</h1>
   <p>A native SwiftUI client for browsing Rule34.xxx on iPhone, iPad, and macOS.</p>
 
@@ -91,6 +89,7 @@ The iOS and macOS apps keep their local app data separately. Use the favorites J
 ### Credits
 
 - **Ruxx** was reviewed as a reference while researching downloader options: [trickerer01/Ruxx](https://github.com/trickerer01/Ruxx).
+- The app icon uses artwork by [Paschi on Rule34.xxx](https://rule34.xxx/index.php?page=account&s=profile&uname=paschi), with the artist's permission.
 
 ## Русский
 
@@ -169,3 +168,4 @@ xattr -cr /Applications/Rule34SwiftMac.app
 ### Благодарности
 
 - **Ruxx** мы изучали как ориентир при поиске решения для загрузчика: [trickerer01/Ruxx](https://github.com/trickerer01/Ruxx).
+- В иконке приложения используется artwork автора [Paschi на Rule34.xxx](https://rule34.xxx/index.php?page=account&s=profile&uname=paschi), с разрешения автора.
