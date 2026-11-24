@@ -89,7 +89,7 @@ The iOS and macOS apps keep their local app data separately. Use the favorites J
 ### Credits
 
 - **Ruxx** was reviewed as a reference while researching downloader options: [trickerer01/Ruxx](https://github.com/trickerer01/Ruxx).
-- The app icon uses artwork by [Paschi on Rule34.xxx](https://rule34.xxx/index.php?page=account&s=profile&uname=paschi), with the artist's permission.
+- The app icon uses artwork by [Paschi on Rule34.xxx](https://rule34.xxx/index.php?page=account&s=profile&uname=paschi), with the artist's permission. It is not covered by the MIT license.
 
 ## Русский
 
@@ -168,4 +168,4 @@ xattr -cr /Applications/Rule34SwiftMac.app
 ### Благодарности
 
 - **Ruxx** мы изучали как ориентир при поиске решения для загрузчика: [trickerer01/Ruxx](https://github.com/trickerer01/Ruxx).
-- В иконке приложения используется artwork автора [Paschi на Rule34.xxx](https://rule34.xxx/index.php?page=account&s=profile&uname=paschi), с разрешения автора.
+- В иконке приложения используется artwork автора [Paschi на Rule34.xxx](https://rule34.xxx/index.php?page=account&s=profile&uname=paschi), с разрешения автора. Лицензия MIT его не касается
