@@ -7,7 +7,7 @@ MAC_PROJECT="macOS/Rule34SwiftMac.xcodeproj"
 MAC_SCHEME="Rule34SwiftMac"
 TARGET_APP_NAME="Rule34Swift-Unsigned.app"
 IPA_NAME="Rule34Swift.ipa"
-DMG_NAME="Rule34SwiftMac.dmg"
+DMG_NAME="Rule34Swift.dmg"
 
 ROOT_DIR="$(pwd)"
 BUILD_ROOT="$(mktemp -d /tmp/r34swift-build.XXXXXX)"
@@ -131,7 +131,7 @@ if [ "$BUILD_TARGET" = "mac" ] || [ "$BUILD_TARGET" = "github" ]; then
   APP_DIR="$SYMROOT/Release"
   cd "$APP_DIR" || { echo "Build output folder not found: $APP_DIR"; exit 1; }
 
-  TARGET_MAC_APP="$MAC_SCHEME.app"
+  TARGET_MAC_APP="Rule34Swift.app"
 
   echo "=== Applying ad-hoc signature ==="
   codesign --force --deep --sign - "$TARGET_MAC_APP"
@@ -148,7 +148,7 @@ if [ "$BUILD_TARGET" = "mac" ] || [ "$BUILD_TARGET" = "github" ]; then
     echo "=== Creating macOS DMG ==="
     DMG_ROOT="$BUILD_ROOT/dmg-root"
     DMG_MOUNT="$BUILD_ROOT/dmg-mount"
-    TEMP_DMG="$BUILD_ROOT/Rule34SwiftMac-rw.dmg"
+    TEMP_DMG="$BUILD_ROOT/Rule34Swift-rw.dmg"
     mkdir -p "$DMG_ROOT"
     ditto "$ROOT_DIR/macOS/build/$TARGET_MAC_APP" "$DMG_ROOT/$TARGET_MAC_APP"
     mkdir -p "$DMG_MOUNT"
@@ -199,7 +199,7 @@ on run argv
       set background color to {43690, 58853, 42148}
     end tell
 
-    set position of item "Rule34SwiftMac.app" of mountFolder to {225, 225}
+    set position of item "Rule34Swift.app" of mountFolder to {225, 225}
     set position of item "Applications" of mountFolder to {690, 225}
     close front Finder window
   end tell

@@ -55,7 +55,7 @@ You can also choose a target directly:
 ./build.sh github
 ```
 
-The `github` target creates `Rule34Swift.ipa` and `Rule34SwiftMac.dmg` in the repository root. The DMG contains the macOS app and an Applications shortcut. The `mac` target also copies the standalone app to `macOS/build/Rule34SwiftMac.app`. These are development builds: they use ad-hoc signing and are not notarized or prepared for App Store release. The script prepares local files; publish them to a GitHub Release manually.
+The `github` target creates `Rule34Swift.ipa` and `Rule34Swift.dmg` in the repository root. The DMG contains `Rule34Swift.app` and an Applications shortcut. The `mac` target also copies the standalone app to `macOS/build/Rule34Swift.app`. These are development builds: they use ad-hoc signing and are not notarized or prepared for App Store release. The script prepares local files; publish them to a GitHub Release manually.
 
 You can also open either project in Xcode:
 
@@ -68,12 +68,12 @@ Choose the `Rule34SwiftMac` or `Rule34Swift` scheme, respectively.
 
 ### Opening the macOS app
 
-The macOS build is ad-hoc signed and is not notarized, so Gatekeeper may block it on first launch. After trying to open the app, go to **System Settings → Privacy & Security**, scroll to **Security**, choose **Open Anyway** for Rule34SwiftMac, then confirm **Open**. See [Apple's instructions](https://support.apple.com/en-us/102445).
+The macOS build is ad-hoc signed and is not notarized, so Gatekeeper may block it on first launch. After trying to open the app, go to **System Settings → Privacy & Security**, scroll to **Security**, choose **Open Anyway** for Rule34Swift, then confirm **Open**. See [Apple's instructions](https://support.apple.com/en-us/102445).
 
 If you trust the copy downloaded from this repository, you can instead remove its quarantine attribute in Terminal:
 
 ```sh
-xattr -cr /Applications/Rule34SwiftMac.app
+xattr -cr /Applications/Rule34Swift.app
 ```
 
 ### Project layout
@@ -134,7 +134,7 @@ ID пользователя и API-ключ хранятся локально в
 ./build.sh github
 ```
 
-Команда `github` создаёт в корне `Rule34Swift.ipa` и `Rule34SwiftMac.dmg`. В DMG находятся приложение macOS и ярлык Applications. Команда `mac` также сохраняет отдельное приложение в `macOS/build/Rule34SwiftMac.app`. Это сборки для разработки: они подписываются ad-hoc, не проходят нотариальное заверение и не подготовлены к публикации в App Store. Скрипт готовит файлы локально; в GitHub Releases их нужно загрузить вручную.
+Команда `github` создаёт в корне `Rule34Swift.ipa` и `Rule34Swift.dmg`. В DMG находятся `Rule34Swift.app` и ярлык Applications. Команда `mac` также сохраняет отдельное приложение в `macOS/build/Rule34Swift.app`. Это сборки для разработки: они подписываются ad-hoc, не проходят нотариальное заверение и не подготовлены к публикации в App Store. Скрипт готовит файлы локально; в GitHub Releases их нужно загрузить вручную.
 
 Проекты можно открыть и собрать в Xcode:
 
@@ -147,12 +147,12 @@ open iOS/Rule34Swift.xcodeproj
 
 ### Первый запуск приложения на macOS
 
-Сборка для macOS подписана ad-hoc и не нотариально заверена, поэтому Gatekeeper может заблокировать первый запуск. Сначала попробуй открыть приложение, затем зайди в **Системные настройки → Конфиденциальность и безопасность**, прокрути до раздела **Безопасность**, нажми **Всё равно открыть** напротив Rule34SwiftMac и подтверди запуск. Подробности — в [инструкции Apple](https://support.apple.com/en-us/102445).
+Сборка для macOS подписана ad-hoc и не нотариально заверена, поэтому Gatekeeper может заблокировать первый запуск. Сначала попробуй открыть приложение, затем зайди в **Системные настройки → Конфиденциальность и безопасность**, прокрути до раздела **Безопасность**, нажми **Всё равно открыть** напротив Rule34Swift и подтверди запуск. Подробности — в [инструкции Apple](https://support.apple.com/en-us/102445).
 
 Если ты доверяешь копии, загруженной из этого репозитория, можно вместо этого удалить атрибут карантина через Терминал:
 
 ```sh
-xattr -cr /Applications/Rule34SwiftMac.app
+xattr -cr /Applications/Rule34Swift.app
 ```
 
 ### Структура проекта

@@ -40,7 +40,7 @@
 		AA00000000000000000000C /* ../Rule34Swift/Extensions/String+HTMLDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../Rule34Swift/Extensions/String+HTMLDecoding.swift"; sourceTree = SOURCE_ROOT; };
 		AA00000000000000000000D /* ../Rule34Swift/Services/Rule34TagMetadataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Rule34Swift/Services/Rule34TagMetadataStore.swift; sourceTree = SOURCE_ROOT; };
 		AA00000000000000000000E /* ../Rule34Swift/Services/KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Rule34Swift/Services/KeychainStore.swift; sourceTree = SOURCE_ROOT; };
-		AA00000000000000000001E /* Rule34SwiftMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rule34SwiftMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA00000000000000000001E /* Rule34Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rule34Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 		AA000000000000000000022 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA00000000000000000001E /* Rule34SwiftMac.app */,
+				AA00000000000000000001E /* Rule34Swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,8 +100,8 @@
 			dependencies = (
 			);
 			name = Rule34SwiftMac;
-			productName = Rule34SwiftMac;
-			productReference = AA00000000000000000001E /* Rule34SwiftMac.app */;
+			productName = Rule34Swift;
+			productReference = AA00000000000000000001E /* Rule34Swift.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -199,14 +199,14 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Rule34Swift Mac";
+				INFOPLIST_KEY_CFBundleDisplayName = Rule34Swift;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				CURRENT_PROJECT_VERSION = 5;
 				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.local.Rule34SwiftMac;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Rule34Swift;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -222,14 +222,14 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Rule34Swift Mac";
+				INFOPLIST_KEY_CFBundleDisplayName = Rule34Swift;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				CURRENT_PROJECT_VERSION = 5;
 				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.local.Rule34SwiftMac;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Rule34Swift;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
