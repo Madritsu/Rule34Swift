@@ -16,6 +16,7 @@
 
 Rule34Swift is an ad-free client for searching and viewing posts from Rule34.xxx. The project contains separate iOS and native macOS apps, with shared networking, models, favorites, settings, and image caching.
 
+> **Unofficial app:** Rule34Swift is an independent third-party project. It is not affiliated with or endorsed by Rule34.xxx or its operators.
 > **Content notice:** Rule34.xxx is an 18+ site, and this app displays adult material hosted there. Follow the site's terms and the laws that apply to you.
 
 ### Features
@@ -95,6 +96,7 @@ The iOS and macOS apps keep their local app data separately. Use the favorites J
 
 Rule34Swift — клиент без рекламы для поиска и просмотра публикаций с Rule34.xxx. В проект входят отдельные приложения для iOS и macOS, которые используют общие сетевые службы, модели, избранное, настройки и кэш изображений.
 
+> **Неофициальное приложение:** Rule34Swift — независимый сторонний проект. Он не является официальным приложением Rule34.xxx и не связан с администрацией сайта.
 > **Предупреждение о содержимом:** Rule34.xxx — сайт категории 18+, и приложение показывает размещённые там материалы для взрослых. Соблюдайте правила сайта и законы вашей страны.
 
 ### Возможности
@@ -147,7 +149,7 @@ open iOS/Rule34Swift.xcodeproj
 
 ### Первый запуск приложения на macOS
 
-Сборка для macOS подписана ad-hoc и не нотариально заверена, поэтому Gatekeeper может заблокировать первый запуск. Сначала попробуйте открыть приложение, затем перейдите в **Системные настройки → Конфиденциальность и безопасность**, прокрутите до раздела **Безопасность**, нажмите **Всё равно открыть** напротив Rule34Swift и подтвердите запуск. Подробности — в [инструкции Apple](https://support.apple.com/en-us/102445).
+Сборка для macOS подписана ad-hoc и не нотариально заверена, поэтому Gatekeeper может заблокировать первый запуск. Сначала попробуйте открыть приложение, затем перейдите в **Системные настройки → Конфиденциальность и безопасность**, прокрутите до раздела **Безопасность**, нажмите **Всё равно открыть** напротив Rule34Swift и подтвердите запуск. Подробности — в [инструкции Apple](https://support.apple.com/ru-ru/102445).
 
 Если вы доверяете копии, загруженной из этого репозитория, можно вместо этого удалить атрибут карантина через Терминал:
 
